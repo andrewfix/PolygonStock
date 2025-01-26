@@ -1,6 +1,5 @@
 package com.stock.exception;
 
-import lombok.Builder;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;
@@ -11,7 +10,7 @@ public class BasicErrorResponse implements ErrorResponse {
     private final String error;
     private final String message;
     private final String path;
-    private LocalDateTime timestamp = LocalDateTime.now();
+    private final LocalDateTime timestamp = LocalDateTime.now();
 
     @Override
     public int getStatus() {
